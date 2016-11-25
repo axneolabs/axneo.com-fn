@@ -12,7 +12,8 @@ build:
   stage: build
 
   script:
-    -  echo "Run Build"
+    - cd ~/
+    - git clone git@repo.axneo.com:axneo-dev/axneo.com.git
 
 
 #test:
@@ -28,7 +29,9 @@ build:
 #  stage: review
 #
 #  script:
-#    - echo "Run Review"
+#    - cd ~/axneo-main
+#    - git checkout $CI_BUILD_REF_NAME
+#    - git pull
 #
 #  environment:
 #    name: review/$CI_BUILD_REF_NAME
