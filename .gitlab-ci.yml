@@ -12,9 +12,8 @@ build:
   stage: build
 
   script:
-    - cd ~/
-    - git clone git@repo.axneo.com:axneo-dev/axneo.com.git
-    - echo "complete"
+    - cd ~/axneo.com
+    - git pull
 
 
 #test:
