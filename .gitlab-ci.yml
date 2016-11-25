@@ -1,0 +1,88 @@
+stages:
+
+  - build
+  - test
+  - review
+  - staging
+  - deploy
+
+
+build:
+
+  stage: build
+
+  script:
+    -  echo "Run Build"
+
+
+#test:
+#
+#  stage: test
+#
+#  script:
+#    - echo "Run Test"
+#
+#
+#deploy_review:
+#
+#  stage: review
+#
+#  script:
+#    - echo "Run Review"
+#
+#  environment:
+#    name: review/$CI_BUILD_REF_NAME
+#    url: https://staging.axneo.com/$CI_BUILD_REF_NAME
+#
+#  only:
+#    - branches
+#
+#  except:
+#    - master
+#
+#
+#stop_review:
+#
+#  variables:
+#    GIT_STRATEGY: none
+#
+#  script:
+#    - echo "Remove review app"
+#
+#  when: manual
+#
+#  environment:
+#    name: review/$CI_BUILD_REF_NAME
+#    action: stop
+#
+#
+#deploy_staging:
+#
+#  stage: staging
+#
+#  script:
+#    - echo "Deploy to staging server"
+#
+#  environment:
+#    name: staging
+#    url: https://staging.axneo.com
+#
+#  only:
+#    - master
+#
+#
+#deploy_production:
+#
+#  stage: deploy
+#
+#  script:
+#    - echo "Deploy to production server"
+#
+#  environment:
+#    name: production
+#    url: https://www.axneo.com
+#
+#  when: manual
+#
+#  only:
+#    - master
