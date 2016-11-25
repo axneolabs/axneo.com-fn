@@ -1,3 +1,4 @@
+#Please make sure to change the defualt database and wordpress values
 version: '2'
 
 services:
