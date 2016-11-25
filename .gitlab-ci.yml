@@ -14,6 +14,7 @@ build:
   script:
     - cd ~/axneo.com
     - git pull
+    - docker-compose -f axneo.yml stop
     - docker-compose rm
     - docker-compose -f axneo.yml up -d
 
