@@ -15,7 +15,7 @@ build:
     - cd ~/axneo.com
     - git pull
     - docker-compose rm
-    - docker-compose up
+    - docker-compose -f axneo up -d
 
 
 #test:
