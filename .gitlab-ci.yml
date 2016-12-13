@@ -1,32 +1,26 @@
 stages:
 
-  - build
   - test
+  - build
   - review
   - staging
   - deploy
 
+test:
+
+  stage: test
+  script:
+    - echo "Run Test"
 
 build:
 
   stage: build
-
   script:
     - cd ~/axneo.com
     - git pull
-    - docker-compose -f axneo.yml stop
-    - docker-compose -f axneo.yml rm
+    - docker-compose -f axneo.yml down
     - docker-compose -f axneo.yml up -d
 
-
-#test:
-#
-#  stage: test
-#
-#  script:
-#    - echo "Run Test"
-#
-#
 #deploy_review:
 #
 #  stage: review

@@ -1,9 +1,8 @@
-#Please make sure to change the defualt database and wordpress values
 version: '2'
 
 services:
   db:
-    image: mariadb:latest
+    image: mariadb:${db_version}
     volumes:
       - ~/axneo.com/volumes/db:/var/lib/mysql
     restart: always
@@ -14,7 +13,7 @@ services:
       MYSQL_PASSWORD: wordpress
 
   wordpress:
-    image: wordpress:latest
+    image: wordpress:${wp_version}
     ports:
       - "80:80"
     depends_on:
