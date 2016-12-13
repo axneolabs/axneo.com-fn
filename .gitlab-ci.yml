@@ -34,8 +34,6 @@ deploy_review:
     name: review/$CI_BUILD_REF_NAME
     url: https://staging.axneo.com/$CI_BUILD_REF_NAME
 
-  when: manual
-
   only:
     - branches
 
