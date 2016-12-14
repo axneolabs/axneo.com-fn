@@ -18,6 +18,7 @@ build:
   stage: build
   script:
     - cd ~/axneo.com
+    - git checkout $CI_BUILD_REF_NAME
     - git pull
     - docker-compose -f axneo.yml down
     - docker-compose -f axneo.yml up -d
