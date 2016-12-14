@@ -17,10 +17,11 @@ build:
 
   stage: build
   script:
-    - cd ~/axneo.com
-    - git pull
-    - docker-compose -f axneo.yml down
-    - docker-compose -f axneo.yml up -d
+    - echo "test"
+#    - cd ~/axneo.com
+#    - git pull
+#    - docker-compose -f axneo.yml down
+#    - docker-compose -f axneo.yml up -d
 
 
 deploy_review:
@@ -32,7 +33,7 @@ deploy_review:
 
   environment:
     name: review/$CI_BUILD_REF_NAME
-    url: https://staging.axneo.com/$CI_BUILD_REF_NAME
+    url: https://review.axneo.com/$CI_BUILD_REF_NAME
 
   only:
     - branches
