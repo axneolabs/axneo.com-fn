@@ -9,7 +9,7 @@ RUN a2enmod php7.0
 RUN a2enmod rewrite
 
 ADD apache-config.conf /etc/apache2/sites-enabled/000-default.conf
-ADD ../app /var/www/
+ADD app /var/www/
 
 RUN service apache2 restart
 
