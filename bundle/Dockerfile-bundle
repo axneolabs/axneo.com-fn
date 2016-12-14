@@ -1,7 +1,18 @@
 FROM ubuntu:latest
 MAINTAINER Axneo <admin@axneo.com>
 
-RUN apt-get update && apt-get -y upgrade
+RUN apt-get update && apt-get -y upgrade && DEBIAN_FRONTEND=noninteractive
 RUN apt-get -y install apache2
+RUN apt-get -y install php7.0 php7.0-mcrypt php7.0-mysql libapache2-mod-php7.0
+
+RUN a2enmod php7.0
+RUN a2enmod rewrite
+
+ADD apache-config.conf /etc/apache2/sites-enabled/000-default.conf
+ADD app /var/www/
+
+RUN service apache2 restart
 
 EXPOSE 80
+
+CMD /usr/sbin/apache2ctl -D FOREGROUND
