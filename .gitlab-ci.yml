@@ -28,6 +28,9 @@ deploy_review:
 
   stage: review
 
+  script:
+    - echo "Deployment complete."
+
   environment:
     name: review/$CI_BUILD_REF_NAME
     url: http//axneo.axneoapps.com/$CI_BUILD_REF_NAME
@@ -44,7 +47,7 @@ stop_review:
     GIT_STRATEGY: none
 
   script:
-    - echo "Remove review app"
+    - docker-compose -f axneo.yml down
 
   when: manual
 
