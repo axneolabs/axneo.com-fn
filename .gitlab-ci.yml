@@ -17,11 +17,10 @@ build:
 
   stage: build
   script:
-    - echo "test"
-#    - cd ~/axneo.com
-#    - git pull
-#    - docker-compose -f axneo.yml down
-#    - docker-compose -f axneo.yml up -d
+    - cd ~/axneo.com
+    - git pull
+    - docker-compose -f axneo.yml down
+    - docker-compose -f axneo.yml up -d
 
 
 deploy_review:
