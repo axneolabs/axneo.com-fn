@@ -8,6 +8,9 @@ RUN apt-get -y install php7.0 php7.0-mcrypt php7.0-mysql libapache2-mod-php7.0
 RUN a2enmod php7.0
 RUN a2enmod rewrite
 
+ADD ./bundle/apache-config.conf /etc/apache2/sites-enabled/000-default.conf
+ADD ./app /var/www/
+
 RUN service apache2 restart
 
 EXPOSE 80
