@@ -21,7 +21,7 @@ build:
     - git checkout $CI_BUILD_REF_NAME
     - git pull
     - docker build -t mysite .
-    - docker run -p 8080:80 -d mysite
+    - docker run -p 80:80 -d mysite
 
 
 deploy_review:
