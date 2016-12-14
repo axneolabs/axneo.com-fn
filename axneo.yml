@@ -32,7 +32,8 @@ services:
       context: ./bundle
       dockerfile: Dockerfile-bundle
 
+    expose:
+      - "80"
+
     ports:
       - "80:80"
-
-    restart: always
