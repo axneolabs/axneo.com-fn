@@ -67,8 +67,6 @@ deploy_staging:
     name: staging
     url: https://staging.axneo.com
 
-  when: manual
-
   only:
     - master
 
