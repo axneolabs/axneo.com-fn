@@ -20,8 +20,8 @@ build:
     - cd ~/axneo.com
     - git checkout $CI_BUILD_REF_NAME
     - git pull
-    - docker build -t mysite .
-    - docker run -p 80:80 -d mysite
+    - docker-compose -f axneo.yml down
+    - docker-compose -f axneo.yml up -d
 
 
 deploy_review:
