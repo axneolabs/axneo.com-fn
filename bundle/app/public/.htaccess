@@ -1,10 +1,10 @@
 # @version 1.0.0
 
 #User access for FN
-#AuthName "Axneo Development Server | Access only for Axneo developers."
-#AuthType Basic
+AuthName "Axneo Development Server | Access only for Axneo developers."
+AuthType Basic
 #AuthUserFile /opt/lib/axneo.users
-#require valid-user
+require valid-user
 
 # Additional directives for web server
 
