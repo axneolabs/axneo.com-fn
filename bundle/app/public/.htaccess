@@ -1,5 +1,4 @@
 # @version 1.0.0
-Access Denied
 #User access for FN
 #AuthName "Axneo Development Server | Access only for Axneo developers."
 #AuthType Basic
