@@ -33,7 +33,7 @@ deploy_review:
 
   environment:
     name: review/$CI_BUILD_REF_NAME
-    url: http://axneo.axneoapps.com/index.php/$CI_BUILD_REF_NAME
+    url: ${site_url}/$CI_BUILD_REF_NAME
 
   only:
     - branches
