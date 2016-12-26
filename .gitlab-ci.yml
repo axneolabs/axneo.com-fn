@@ -7,7 +7,7 @@ stages:
   - notify
 
 
-Build_Axon(s):
+Build Axon(s):
 
   stage: build
   script:
