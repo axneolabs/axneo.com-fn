@@ -13,6 +13,4 @@ ADD app /var/www/
 
 RUN service apache2 restart
 
-EXPOSE 80
-
 CMD /usr/sbin/apache2ctl -D FOREGROUND
