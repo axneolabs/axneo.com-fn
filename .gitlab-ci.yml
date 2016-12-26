@@ -4,6 +4,7 @@ stages:
   - test
   - review
   - deploy
+  - notify
 
 
 build:
@@ -40,6 +41,7 @@ start_review:
 
   except:
     - master
+
 
 stop_review:
 
