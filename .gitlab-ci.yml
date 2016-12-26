@@ -1,16 +1,9 @@
 stages:
 
-  - test
   - build
+  - test
   - review
-  - staging
   - deploy
-
-test:
-
-  stage: test
-  script:
-    - echo "Run Test"
 
 
 build:
@@ -24,7 +17,14 @@ build:
     - docker-compose -f axneo.yml up -d --build
 
 
-deploy_review:
+test:
+
+  stage: test
+  script:
+    - echo "Run Test"
+
+
+start_review:
 
   stage: review
 
@@ -33,7 +33,7 @@ deploy_review:
 
   environment:
     name: review/$CI_BUILD_REF_NAME
-    url: http://axneo.axneoapps.com/$CI_BUILD_REF_NAME
+    url: ${site_name}/$CI_BUILD_REF_NAME
 
   only:
     - branches
@@ -60,7 +60,7 @@ stop_review:
 
 deploy_staging:
 
-  stage: staging
+  stage: deploy
 
   script:
     - echo "Deploy to staging server"
