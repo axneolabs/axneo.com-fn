@@ -19,8 +19,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<div id="body">
 		Demo for Axneo SSDLC
-		
-		<p>Hello from Cloud IDE</p>
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds.</p>
