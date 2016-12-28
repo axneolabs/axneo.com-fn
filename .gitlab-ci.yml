@@ -18,14 +18,14 @@ Build Axon(s):
     - docker-compose -f axneo.yml up -d --build
 
 
-test:
+Test:
 
   stage: test
   script:
     - echo "Run Test"
 
 
-start_review:
+Start Review:
 
   stage: review
 
@@ -43,7 +43,7 @@ start_review:
     - master
 
 
-stop_review:
+Stop Review:
 
   stage: review
 
