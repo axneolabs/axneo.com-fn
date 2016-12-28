@@ -4,9 +4,10 @@ stages:
   - test
   - review
   - deploy
+  - notify
 
 
-build:
+Build Axon(s):
 
   stage: build
   script:
@@ -17,14 +18,14 @@ build:
     - docker-compose -f axneo.yml up -d --build
 
 
-test:
+Test:
 
   stage: test
   script:
     - echo "Run Test"
 
 
-start_review:
+Start Review:
 
   stage: review
 
@@ -41,7 +42,8 @@ start_review:
   except:
     - master
 
-stop_review:
+
+Stop Review:
 
   stage: review
 
