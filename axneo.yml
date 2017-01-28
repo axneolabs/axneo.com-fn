@@ -26,7 +26,7 @@ services:
       WORDPRESS_DB_PASSWORD: wordpress
 
   volumes:
-    daabase:
+    database:
       - ~/axneo-app/volumes/db:rw
 
 #  app:
