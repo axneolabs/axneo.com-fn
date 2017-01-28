@@ -11,11 +11,7 @@ Build Axon(s):
 
   stage: build
   script:
-    - cd ~/axneoapp
-    - git checkout $CI_BUILD_REF_NAME
-    - git pull
-    - docker-compose -f axneo.yml down
-    - docker-compose -f axneo.yml up -d --build
+    - axneo build
 
 
 Test:
