@@ -3,7 +3,7 @@ version: '2'
 services:
 
   db:
-    image: mysql:latest
+    image: mariadb:10.1
     volumes:
       - "~/axneo-app/database:/var/lib/mysql"
     restart: always
