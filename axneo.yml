@@ -25,12 +25,13 @@ services:
 #      WORDPRESS_DB_HOST: db:3306
 #      WORDPRESS_DB_USER: wordpress
 #      WORDPRESS_DB_PASSWORD: wordpress
-  app:
-    build:
-      context: ./bundle
-      dockerfile: axneo.docker
 
-    ports:
-      - "80:80"
+app:
+  build:
+    context: ./bundle
+    dockerfile: axneo.docker
 
-    restart: always
+  ports:
+    - "80:80"
+
+  restart: always
