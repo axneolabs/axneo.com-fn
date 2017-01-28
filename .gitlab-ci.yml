@@ -11,7 +11,7 @@ Build Axon(s):
 
   stage: build
   script:
-    - axneo -h
+    - axneo build
 
 
 Test:
