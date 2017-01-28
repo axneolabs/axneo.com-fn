@@ -15,13 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Welcome to Axneo</h1>
-
-	<div id="body">
-		Demo for Axneo SSDLC
-	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds.</p>
+	Update in progress.....
 </div>
 
 </body>
