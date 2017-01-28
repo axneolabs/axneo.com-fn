@@ -5,7 +5,7 @@ services:
    db:
      image: mysql:latest
      volumes:
-       - database:/var/lib/mysql:rw
+       - "~/axneo-app/database:/var/lib/mysql"
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: wordpress
@@ -23,9 +23,6 @@ services:
      environment:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_PASSWORD: wordpress
-
-volumes:
-    database:
 
 #  app:
 #    build:
