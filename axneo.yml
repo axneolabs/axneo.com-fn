@@ -1,7 +1,9 @@
 version: '2'
+
 services:
+
    db:
-     image: mysql:latest
+     image: mariadb:latest
      volumes:
        - database:/var/lib/mysql:rw
      restart: always
@@ -21,6 +23,7 @@ services:
      environment:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_PASSWORD: wordpress
+
 volumes:
     database:
 
