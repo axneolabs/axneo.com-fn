@@ -5,7 +5,7 @@ services:
   db:
     image: mariadb:latest
     volumes:
-      - "~/axneo-app/database:/var/lib/mysql"
+      - "~/axneo-app/databases:/var/lib/mysql"
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: wordpress
