@@ -20,7 +20,7 @@ Build Axon(s):
     - axneo-r1
 
   script:
-    - axneo build
+    - axneo build review
 
 
 Unit Test:
@@ -107,7 +107,7 @@ Deploy Production:
     - axneo-r1
 
   script:
-    - echo "Deploy to production server"
+    - axneo deploy production
 
   environment:
     name: production
