@@ -14,7 +14,7 @@ Build Axon(s):
     - axneo -h
 
 
-Test:
+Unit Test:
 
   stage: test
   script:
