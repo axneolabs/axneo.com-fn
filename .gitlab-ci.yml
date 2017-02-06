@@ -119,12 +119,12 @@ Deploy Production:
     - master
 
 
-Status:
+Notify:
 
-  stage: status
+  stage: notify
 
   tags:
     - axneo-r1
 
   script:
-    - axneo status
+    - echo "test"
