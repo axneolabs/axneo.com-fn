@@ -11,7 +11,7 @@ Build Axon(s):
 
   stage: build
   script:
-    - axneo -h
+    - axneo build
 
 
 Unit Test:
@@ -62,12 +62,12 @@ Stop Review:
     - master
 
 
-deploy_staging:
+Deploy Staging:
 
   stage: deploy
 
   script:
-    - echo "Deploy to staging server"
+    - axneo staging
 
   environment:
     name: staging
@@ -77,7 +77,7 @@ deploy_staging:
     - master
 
 
-deploy_production:
+Deploy Production:
 
   stage: deploy
 
