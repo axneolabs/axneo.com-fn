@@ -10,8 +10,10 @@ stages:
 Build Axon(s):
 
   stage: build
+
   tags:
     - axneo-r1
+
   script:
     - axneo build
 
@@ -19,6 +21,10 @@ Build Axon(s):
 Unit Test:
 
   stage: test
+
+  tags:
+      - axneo-r1
+
   script:
     - echo "Run Test"
 
@@ -26,6 +32,9 @@ Unit Test:
 Start Review:
 
   stage: review
+
+  tags:
+      - axneo-r1
 
   script:
     - echo "Deployment complete"
@@ -44,6 +53,9 @@ Start Review:
 Stop Review:
 
   stage: review
+
+  tags:
+      - axneo-r1
 
   variables:
     GIT_STRATEGY: none
@@ -67,6 +79,9 @@ Stop Review:
 Deploy Staging:
 
   stage: deploy
+
+  tags:
+      - axneo-r1
 
   script:
     - axneo staging
@@ -99,6 +114,9 @@ Deploy Production:
 Notify:
 
   stage: notify
+
+  tags:
+      - axneo-r1
 
   script:
     - echo "test"
