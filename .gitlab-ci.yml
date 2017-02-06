@@ -55,6 +55,12 @@ Stop Review:
     name: review/$CI_BUILD_REF_NAME
     action: stop
 
+  only:
+    - branches
+
+  except:
+    - master
+
 
 deploy_staging:
 
@@ -86,3 +92,11 @@ deploy_production:
 
   only:
     - master
+
+
+Notify:
+
+  stage: notify
+
+  script:
+    - echo "test"
