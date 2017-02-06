@@ -10,6 +10,8 @@ stages:
 Build Axon(s):
 
   stage: build
+  tags:
+    - axneo-r1
   script:
     - axneo build
 
