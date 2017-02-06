@@ -2,8 +2,8 @@
 ##                                                                            #
 ##       GIT IGNORE FOR Axneo PROJECT                                         #
 ##       ------------------------------                                       #
-##       By: www.waan.io <admin@waan.email>                                   #
-##       License: Copyright@www.waan.io, all rights reserved.                 #
+##       By: www.axneo.com <admin@axneo.com>                                  #
+##       License: Copyright@www.axneo.com, all rights reserved.               #
 ##                                                                            #
 ###############################################################################
 
@@ -72,6 +72,7 @@ bower_components
 #===================================#
 #       Fab Files                   #
 #===================================#
+fabfile.py
 fabfile.pyc
 
 #===================================#
@@ -95,7 +96,6 @@ sitemap.xml.gz
 #===================================#
 #      	   User specific            #
 #===================================#
-backup
 
 #===================================#
 #           Codeigniter             #
