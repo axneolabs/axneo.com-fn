@@ -6,6 +6,11 @@ stages:
   - deploy
   - notify
 
+before_script:
+
+  - axneo system update
+  - axneo system upgrade
+
 
 Build Axon(s):
 
@@ -34,10 +39,10 @@ Start Review:
   stage: review
 
   tags:
-      - axneo-r1
+    - axneo-r1
 
   script:
-    - echo "Deployment complete"
+    - axneo status
 
   environment:
     name: review/$CI_BUILD_REF_NAME
@@ -55,13 +60,13 @@ Stop Review:
   stage: review
 
   tags:
-      - axneo-r1
+    - axneo-r1
 
   variables:
     GIT_STRATEGY: none
 
   script:
-    - docker-compose -f axneo.yml down
+    - axneo shutdown
 
   when: manual
 
@@ -81,10 +86,10 @@ Deploy Staging:
   stage: deploy
 
   tags:
-      - axneo-r1
+    - axneo-r1
 
   script:
-    - axneo staging
+    - axneo deploy staging
 
   environment:
     name: staging
@@ -97,6 +102,9 @@ Deploy Staging:
 Deploy Production:
 
   stage: deploy
+
+  tags:
+    - axneo-r1
 
   script:
     - echo "Deploy to production server"
@@ -116,7 +124,7 @@ Notify:
   stage: notify
 
   tags:
-      - axneo-r1
+    - axneo-r1
 
   script:
     - echo "test"
