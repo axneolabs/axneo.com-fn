@@ -22,7 +22,7 @@ services:
       - "~/axneo-app/databases:/var/lib/mysql"
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: xhtsXj6*sww
+      MYSQL_ROOT_PASSWORD: xhtsXj6*s
       MYSQL_DATABASE: ${mariadb_name}
       MYSQL_USER: ${mariadb_user}
       MYSQL_PASSWORD: ${mariadb_password}
