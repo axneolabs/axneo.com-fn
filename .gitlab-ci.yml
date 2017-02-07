@@ -119,9 +119,9 @@ Deploy Production:
     - master
 
 
-Status:
+Notify:
 
-  stage: status
+  stage: notify
 
   tags:
     - axneo-r1
