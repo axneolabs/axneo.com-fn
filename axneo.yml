@@ -27,6 +27,28 @@ services:
 #      MYSQL_USER: ${mariadb_user}
 #      MYSQL_PASSWORD: ${mariadb_password}
 
+#  app:
+#    image: joomla:${joomla_version}
+#    depends_on:
+#      - db
+#    links:
+#      - db
+#    ports:
+#      - "80:80"
+#    restart: always
+#    environment:
+#
+#
+#  db:
+#    image: mariadb:${mariadb_jversion}
+#    volumes:
+#      - "~/axneo-app/databases:/var/lib/mysql"
+#    environment:
+#      MYSQL_ROOT_PASSWORD: xhtsXj6*s
+#      MYSQL_DATABASE: ${mariadb_jname}
+#      MYSQL_USER: ${mariadb_juser}
+#      MYSQL_PASSWORD: ${mariadb_jpassword}
+
   app:
     build:
       context: ./bundle
