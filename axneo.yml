@@ -2,30 +2,30 @@ version: '2'
 
 services:
 
-#  app:
-#      image: wordpress:${wp_version}
-#      depends_on:
-#        - db
-#      links:
-#        - db
-#      ports:
-#        - "80:80"
-#      restart: always
-#      environment:
-#        WORDPRESS_DB_HOST: db:3306
-#        WORDPRESS_DB_USER: ${wp_db_user}
-#        WORDPRESS_DB_PASSWORD: ${wp_db_password}
-#
-#  db:
-#    image: mariadb:${mariadb_version}
-#    volumes:
-#      - "~/axneo-app/databases:/var/lib/mysql"
-#    restart: always
-#    environment:
-#      MYSQL_ROOT_PASSWORD: xhtsXj6*s
-#      MYSQL_DATABASE: ${mariadb_name}
-#      MYSQL_USER: ${mariadb_user}
-#      MYSQL_PASSWORD: ${mariadb_password}
+  app:
+      image: wordpress:${wp_version}
+      depends_on:
+        - db
+      links:
+        - db
+      ports:
+        - "80:80"
+      restart: always
+      environment:
+        WORDPRESS_DB_HOST: db:3306
+        WORDPRESS_DB_USER: ${wp_db_user}
+        WORDPRESS_DB_PASSWORD: ${wp_db_password}
+
+  db:
+    image: mariadb:${mariadb_version}
+    volumes:
+      - "~/axneo-app/databases:/var/lib/mysql"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: xhtsXj6*s
+      MYSQL_DATABASE: ${mariadb_name}
+      MYSQL_USER: ${mariadb_user}
+      MYSQL_PASSWORD: ${mariadb_password}
 
 #  app:
 #    image: joomla:${joomla_version}
@@ -49,12 +49,12 @@ services:
 #      MYSQL_USER: ${mariadb_juser}
 #      MYSQL_PASSWORD: ${mariadb_jpassword}
 
-  app:
-    build:
-      context: ./bundle
-      dockerfile: axneo.docker
-
-    ports:
-      - "80:80"
-
-    restart: always
+#  app:
+#    build:
+#      context: ./bundle
+#      dockerfile: axneo.docker
+#
+#    ports:
+#      - "80:80"
+#
+#    restart: always
