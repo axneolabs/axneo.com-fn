@@ -53,7 +53,7 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+	define('ENVIRONMENT', getenv("APP_ENV"));
 
 /*
  *---------------------------------------------------------------
@@ -70,7 +70,6 @@ switch (ENVIRONMENT)
 		ini_set('display_errors', 1);
 	break;
 
-	case 'testing':
 	case 'production':
 		ini_set('display_errors', 0);
 		if (version_compare(PHP_VERSION, '5.3', '>='))
@@ -97,7 +96,7 @@ switch (ENVIRONMENT)
  * This variable must contain the name of your "system" directory.
  * Set the path if it is not in the same directory as this file.
  */
-	$system_path = 'system';
+	$system_path = '../system';
 
 /*
  *---------------------------------------------------------------
@@ -114,7 +113,7 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
-	$application_folder = 'application';
+	$application_folder = '../application';
 
 /*
  *---------------------------------------------------------------
