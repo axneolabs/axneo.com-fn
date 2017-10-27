@@ -8,7 +8,7 @@ stages:
 
 before_script:
 
-  - axneo system update
+  - axneo system updatess
   - axneo system upgrade
 
 
