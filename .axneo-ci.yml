@@ -1,4 +1,15 @@
-before_script:
+stages:
 
-  - axneo system update
-  - axneo system upgrade
+  - build
+
+
+Build Axon(s):
+
+  stage: build
+
+  tags:
+    - axneo-r1
+
+  script:
+    - axneo system update
+    - axneo system upgrade
